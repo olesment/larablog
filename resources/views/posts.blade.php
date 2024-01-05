@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<title>My blog</title>
-
-<body>
+<x-layout>
+    
     @foreach ($posts as $post)
         
         <article>
@@ -14,4 +12,6 @@
             <div>{{ $post -> excerpt }}</div>
         </article>
     @endforeach
-</body>
+
+    
+</x-layout>

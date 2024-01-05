@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<title>My blog</title>
+<x-layout>
 
-<body>
-    <article>
+
+      <article>
       <h1>{{ $post -> title }}</h1>
 
       <div>
@@ -11,4 +10,6 @@
     </article>
 
     <a href="/">Go back</a>
-</body>
+
+
+</x-layout>

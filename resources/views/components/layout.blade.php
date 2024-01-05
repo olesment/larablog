@@ -2,5 +2,5 @@
 <title>My blog</title>
 
 <body>
-   @yield('content')
+   {{ $slot }}
 </body>
