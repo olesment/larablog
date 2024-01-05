@@ -81,5 +81,15 @@ class Post
         // return view('post',['post => $post']);
     }
 
+    public static function findOrFail($slug){
+        $post = static::find($slug);
+
+        if (! $post){
+            throw new ModelNotFoundException('ModelNotFound');
+        }
+
+        return $post;
+    }
+
 
 }
