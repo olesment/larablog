@@ -10,5 +10,5 @@ class Post extends Model
     use HasFactory;
 
     //protected $fillable = ['title','excerpt','body'];
-    protected $guarded=["id"];
+    protected $guarded=["id"]; // if you leave brackets empty, you disable whole mass assignment
 }
