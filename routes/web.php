@@ -96,11 +96,11 @@ Route::get('/', function () {
 //     //return view('posts',['posts'=> Post::all()]);
 // });
 
-Route::get('posts/{post}', function ($id){
+Route::get('posts/{post}', function (Post $post){
     
 
     return view('post', [
-        'post' => Post::findOrFail($id)
+        'post' => $post//Post::findOrFail($id)
     ]);
    
    //Find a post by its slug and pass it to a view called post
