@@ -10,12 +10,9 @@ class Post extends Model
     use HasFactory;
 
     //protected $fillable = ['title','excerpt','body'];
-    protected $guarded=["id"]; // if you leave brackets empty, you disable whole mass assignment
-
-    // public function getRouteKeyName()
-    // {
-    //     return "slug";
-    // }
+    protected $guarded=[]; // if you leave brackets empty, you disable whole mass assignment
+    protected $with = ['category','author'];
+    
     public function category()
     {
         return $this->belongsTo(Category::class);
