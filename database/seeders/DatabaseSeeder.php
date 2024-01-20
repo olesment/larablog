@@ -19,40 +19,42 @@ class DatabaseSeeder extends Seeder
         Post::truncate();
         Category::truncate();
 
-        $user = User::factory()->create();
+        Post::factory()->create();
 
-        $personal = Category::create([
-            'name' => "Personal",
-            'slug' => "personal"
-        ]);
+        // $user = User::factory()->create();
+
+        // $personal = Category::create([
+        //     'name' => "Personal",
+        //     'slug' => "personal"
+        // ]);
         
-        $family = Category::create([
-            'name' => 'Family',
-            'slug' => 'family'
-        ]);
+        // $family = Category::create([
+        //     'name' => 'Family',
+        //     'slug' => 'family'
+        // ]);
         
-        $work=Category::create([
-            'name' => 'Work',
-            'slug' => 'work'
-        ]);
+        // $work=Category::create([
+        //     'name' => 'Work',
+        //     'slug' => 'work'
+        // ]);
        
-        Post::create([
-            'user_id'=>$user->id,
-            'category_id'=>$family->id,
-            'title'=>'My Family Post',
-            'slug'=> 'my-family-post',
-            'excerpt'=>'<p>Lorem Ipsum</p>',
-            'body'=>'Lorem Ipsum Dolor sit amet'
-        ]);
+        // Post::create([
+        //     'user_id'=>$user->id,
+        //     'category_id'=>$family->id,
+        //     'title'=>'My Family Post',
+        //     'slug'=> 'my-family-post',
+        //     'excerpt'=>'<p>Lorem Ipsum</p>',
+        //     'body'=>'Lorem Ipsum Dolor sit amet'
+        // ]);
 
-        Post::create([
-            'user_id'=>$user->id,
-            'category_id'=>$work->id,
-            'title'=>'My work Post',
-            'slug'=> 'my-work-post',
-            'excerpt'=>'<p>Lorem Ipsum</p>',
-            'body'=>'<p>Lorem Ipsum Dolor sit amet</p>'
-        ]);
+        // Post::create([
+        //     'user_id'=>$user->id,
+        //     'category_id'=>$work->id,
+        //     'title'=>'My work Post',
+        //     'slug'=> 'my-work-post',
+        //     'excerpt'=>'<p>Lorem Ipsum</p>',
+        //     'body'=>'<p>Lorem Ipsum Dolor sit amet</p>'
+        // ]);
 
     }
 }
