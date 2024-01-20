@@ -15,11 +15,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::truncate();
-        Post::truncate();
-        Category::truncate();
+        User::truncate(); // this can be also removed, if when you run seeders you also refresh database
+        Post::truncate(); // this can be also removed, if when you run seeders you also refresh database
+        Category::truncate(); // this can be also removed, if when you run seeders you also refresh database php artisan migrate:fresh --seed
 
-        Post::factory()->create();
+        $user = User::factory()->create([
+            "name"=> "John Doe",
+        ]);
+
+        Post::factory(5)->create([
+            "user_id"=> $user->id,
+        ]);
 
         // $user = User::factory()->create();
 

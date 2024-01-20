@@ -9,7 +9,7 @@
                 </a>
             </h1>
             <p>
-                <a href="#">{{ $post->user->name }}</a><a href="/categories/{{ $post->category->slug }}">{{$post->category->name}}</a>
+                <a href="#">{{ $post->author->name }}</a><a href="/categories/{{ $post->category->slug }}">{{$post->category->name}}</a>
             </p>
             <div>{{ $post -> excerpt }}</div>
         </article>
