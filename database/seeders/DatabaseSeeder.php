@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'category_id'=>$family->id,
             'title'=>'My Family Post',
             'slug'=> 'my-family-post',
-            'excerpt'=>'Lorem Ipsum',
+            'excerpt'=>'<p>Lorem Ipsum</p>',
             'body'=>'Lorem Ipsum Dolor sit amet'
         ]);
 
@@ -50,8 +50,8 @@ class DatabaseSeeder extends Seeder
             'category_id'=>$work->id,
             'title'=>'My work Post',
             'slug'=> 'my-work-post',
-            'excerpt'=>'Lorem Ipsum',
-            'body'=>'Lorem Ipsum Dolor sit amet'
+            'excerpt'=>'<p>Lorem Ipsum</p>',
+            'body'=>'<p>Lorem Ipsum Dolor sit amet</p>'
         ]);
 
     }
