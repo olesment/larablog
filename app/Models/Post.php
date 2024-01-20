@@ -12,8 +12,12 @@ class Post extends Model
     //protected $fillable = ['title','excerpt','body'];
     protected $guarded=["id"]; // if you leave brackets empty, you disable whole mass assignment
 
-    public function getRouteKeyName()
+    // public function getRouteKeyName()
+    // {
+    //     return "slug";
+    // }
+    public function category()
     {
-        return "slug";
+        return $this->belongsTo(Category::class);
     }
 }
